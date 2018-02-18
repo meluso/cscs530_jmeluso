@@ -51,7 +51,7 @@ def init():
     
     # Create the agent
     ant = agent([RD.randint(0,width),RD.randint(0,height)],0)
-    #ant2 = agent([RD.randint(0,width),RD.randint(0,height)],0)
+    ant2 = agent([RD.randint(0,width),RD.randint(0,height)],0)
 
 class agent():    
     # Initialize the agent at the origin with its direction
@@ -134,7 +134,7 @@ def step():
     #       elif ant is on black, the ant turns right & changes cell to black
     #   - ant moves forward one
     world = ant.execute(world)
-    #world = ant2.execute(world)
+    world = ant2.execute(world)
 
 
 import pycxsimulator
