@@ -21,5 +21,29 @@ I was able to get the highway to form when I expanded the board to 100, shown in
 
 ![Board of 100 after 10000](https://github.com/meluso/cscs530_jmeluso/blob/master/hw03/hw3_images/jmeluso_hw3_fig3.png)
 
-## Problem 2
+## Problems 2 & 3
 
+Part of my choice to use agents instead of the grid-method was in anticipation of this problem, because creating new instances of agents in OO programming is easy enough. The image below shows an example with 2 ants on the 100-size board:
+
+![2 agents before 10000](https://github.com/meluso/cscs530_jmeluso/blob/master/hw03/hw3_images/jmeluso_hw3_fig4.png)
+
+Both agents started to create paths which were symmetric to one another, as expected from a model which uses identical rules. When the agents started far enough apart from each other, both began to create highways:
+
+![2 agents after 10000](https://github.com/meluso/cscs530_jmeluso/blob/master/hw03/hw3_images/jmeluso_hw3_fig5.png)
+
+In this particular run, they both ran into each other and began to retrace the highways they'd created! Shown here:
+
+![2 agents retrace](https://github.com/meluso/cscs530_jmeluso/blob/master/hw03/hw3_images/jmeluso_hw3_fig6.png)
+
+When the agents started closer together, they ran into each other before they could begin to create their "10,000 highways":
+
+![2 agents collide early](https://github.com/meluso/cscs530_jmeluso/blob/master/hw03/hw3_images/jmeluso_hw3_fig7.png)
+
+In this case, they didn't create highways. However, they did begin to retrace their steps exactly at one point and eventually returned to their original positions after undoing everything they'd done:
+
+![2 agents collide later on](https://github.com/meluso/cscs530_jmeluso/blob/master/hw03/hw3_images/jmeluso_hw3_fig8.png)
+![2 agents collide a lot later on](https://github.com/meluso/cscs530_jmeluso/blob/master/hw03/hw3_images/jmeluso_hw3_fig9.png)
+
+Perhaps a property of these two-agent examples is that after colliding, they eventually retrace their steps back to the original position and start again. From all of the models I've run so far, that seems to be the case, an emergent oscillating behavior which depends on when the agents interact with each other's path. In the case I showed before, they eventually performed a 180-degree rotated version of what they'd done previously and presumably would continue in these oscillatory patterns thereafter.
+
+![2 agents collide way, way later](https://github.com/meluso/cscs530_jmeluso/blob/master/hw03/hw3_images/jmeluso_hw3_fig10.png)
