@@ -6,11 +6,11 @@ John Meluso
 * Course Title: Computer Modeling of Complex Systems
 * Term: Winter, 2018
 
-
+## 1. Introduction
 
 &nbsp; 
 
-### Goal 
+### 1. Goal 
 *****
  
 _Provide a short, 1-3 sentence description of the goal of your model_
@@ -18,12 +18,12 @@ _Provide a short, 1-3 sentence description of the goal of your model_
 The objective of this model is to simulate the effects of networked miscommunication between members of a design team on the resulting complex engineered system's performance. The model will simulate miscommunication between team members about the definition of a design parameter's "estimate" -- a phenomena identified through more than 80 interviews with practicing engineers in a real-world complex engineered system design context -- and the resulting value of that parameter at the end of the system design process.
 
 &nbsp;  
-### Justification
+### 1. Justification
 ****
 _Short explanation on why you are using ABM_
 
 &nbsp; 
-### Main Micro-level Processes and Macro-level Dynamics of Interest
+### 1. Main Micro-level Processes and Macro-level Dynamics of Interest
 ****
 
 _Short overview of the key processes and/or relationships you are interested in using your model to explore. Will likely be something regarding emergent behavior that arises from individual interactions_
@@ -31,7 +31,7 @@ _Short overview of the key processes and/or relationships you are interested in 
 &nbsp; 
 
 
-## Model Outline
+## 1. Model Outline
 ****
 &nbsp; 
 ### 1) Environment
