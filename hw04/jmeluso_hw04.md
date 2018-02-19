@@ -1,3 +1,5 @@
+pandoc --number-sections < test.md > out.html
+
 # Model Proposal for Simulating Miscommunication in Complex Engineered System Design
 
 John Meluso
@@ -94,7 +96,7 @@ _Provide a high level, step-by-step description of your schedule during each "ti
 
 &nbsp; 
 
-### 2.5.Assessment and Outcome Measures
+### 2.5. Assessment and Outcome Measures
 
 _What quantitative metrics and/or qualitative features will you use to assess your model outcomes?_
 
