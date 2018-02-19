@@ -1,6 +1,6 @@
-# Model Proposal for _[Project Name]_
+# Model Proposal for Simulating Miscommunication in Complex Engineered System Design
 
-_Your Name_
+John Meluso
 
 * Course ID: CMPLXSYS 530,
 * Course Title: Computer Modeling of Complex Systems
@@ -14,6 +14,8 @@ _Your Name_
 *****
  
 _Provide a short, 1-3 sentence description of the goal of your model_
+
+The objective of this model is to simulate the effects of networked miscommunication between members of a design team on the resulting complex engineered system's performance. The model will simulate miscommunication between team members about the definition of a design parameter's "estimate"---a phenomena identified through more than 80 interviews with practicing engineers in a real-world complex engineered system design context---and the resulting value of that parameter at the end of the design and implementation process of the system.
 
 &nbsp;  
 ### Justification
