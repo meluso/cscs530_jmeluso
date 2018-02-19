@@ -10,7 +10,7 @@ John Meluso
 
 &nbsp; 
 
-### 1. Goal 
+### 1.1. Goal 
 *****
  
 _Provide a short, 1-3 sentence description of the goal of your model_
@@ -18,12 +18,12 @@ _Provide a short, 1-3 sentence description of the goal of your model_
 The objective of this model is to simulate the effects of networked miscommunication between members of a design team on the resulting complex engineered system's performance. The model will simulate miscommunication between team members about the definition of a design parameter's "estimate" -- a phenomena identified through more than 80 interviews with practicing engineers in a real-world complex engineered system design context -- and the resulting value of that parameter at the end of the system design process.
 
 &nbsp;  
-### 1. Justification
+### 1.2. Justification
 ****
 _Short explanation on why you are using ABM_
 
 &nbsp; 
-### 1. Main Micro-level Processes and Macro-level Dynamics of Interest
+### 1.3. Main Micro-level Processes and Macro-level Dynamics of Interest
 ****
 
 _Short overview of the key processes and/or relationships you are interested in using your model to explore. Will likely be something regarding emergent behavior that arises from individual interactions_
@@ -31,10 +31,10 @@ _Short overview of the key processes and/or relationships you are interested in 
 &nbsp; 
 
 
-## 1. Model Outline
+## 2. Model Outline
 ****
 &nbsp; 
-### 1) Environment
+### 2.1. Environment
 _Description of the environment in your model. Things to specify *if they apply*:_
 
 * _Boundary conditions (e.g. wrapping, infinite, etc.)_
@@ -52,7 +52,7 @@ _Description of the environment in your model. Things to specify *if they apply*
 
 &nbsp; 
 
-### 2) Agents
+### 2.2. Agents
  
  _Description of the "agents" in the system. Things to specify *if they apply*:_
  
@@ -69,7 +69,7 @@ _Description of the environment in your model. Things to specify *if they apply*
 
 &nbsp; 
 
-### 3) Action and Interaction 
+### 2.3. Action and Interaction 
  
 **_Interaction Topology_**
 
@@ -84,7 +84,7 @@ _What does an agent, cell, etc. do on a given turn? Provide a step-by-step descr
 3. Etc...
 
 &nbsp; 
-### 4) Model Parameters and Initialization
+### 2.4. Model Parameters and Initialization
 
 _Describe and list any global parameters you will be applying in your model._
 
@@ -94,12 +94,12 @@ _Provide a high level, step-by-step description of your schedule during each "ti
 
 &nbsp; 
 
-### 5) Assessment and Outcome Measures
+### 2.5.Assessment and Outcome Measures
 
 _What quantitative metrics and/or qualitative features will you use to assess your model outcomes?_
 
 &nbsp; 
 
-### 6) Parameter Sweep
+### 2.6. Parameter Sweep
 
 _What parameters are you most interested in sweeping through? What value ranges do you expect to look at for your analysis?_
