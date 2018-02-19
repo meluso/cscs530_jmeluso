@@ -1,5 +1,3 @@
-pandoc --number-sections < test.md > out.html
-
 # Model Proposal for Simulating Miscommunication in Complex Engineered System Design
 
 John Meluso
