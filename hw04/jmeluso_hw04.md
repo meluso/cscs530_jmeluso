@@ -7,9 +7,6 @@ John Meluso
 * Term: Winter, 2018
 
 ## 1. Introduction
-
-&nbsp; 
-
 ### 1.1. Goal 
 *****
  
