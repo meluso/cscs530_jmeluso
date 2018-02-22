@@ -19,6 +19,8 @@ The objective of this model is to simulate the effects of networked miscommunica
 ****
 _Short explanation on why you are using ABM_
 
+Systems engineering methods generally apply top-down approaches to system technical design and organization management. But while systems methods effectively manage the technical systems, they incorrectly assume that organizations of people function as unbiased actors thereby neglecting known cognitive heuristics and social dynamics. (Meluso & Austin-Breneman, 2017) One of the most effective ways to demonstrate to engineering researchers and practitioners that cognitive heuristics and social dynamics have costly effects on system performance is by modeling behavioral phenomena that those researchers and practitioners _know_ to be true from their own experiences. Agent-based modeling helps engineers link social behaviors to technical elements and shows the aggregate effects of those bottom-up behavioral phenomena on a system's technical performance.
+
 &nbsp; 
 ### 1.3. Main Micro-level Processes and Macro-level Dynamics of Interest
 ****
