@@ -27,8 +27,7 @@ Systems engineering methods generally apply top-down approaches to system techni
 
 _Short overview of the key processes and/or relationships you are interested in using your model to explore. Will likely be something regarding emergent behavior that arises from individual interactions_
 
-&nbsp; 
-
+I'm interested in exploring the spread of design estimate uncertainty resulting from system miscommunication and reduction in system performance consequential to 
 
 ## 2. Model Outline
 ****
