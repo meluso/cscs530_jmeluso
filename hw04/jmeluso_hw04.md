@@ -33,10 +33,6 @@ This model will simulate the micro-level process of communication wherein indivi
 
 The micro-level processes of this model will be those of decision making within an agent and how the agent exchanges information with other agents. Agents will have a reporting structure through which they will receive requests for information. When they receive a request for information, the agent will have a (parameter-determined and -swept) probability of interpreting the request in one of two possible formsI'm interested in exploring the spread of design estimate uncertainty resulting from system miscommunication and reduction in system performance consequential to 
 
-#### 1.3.2. Macro-level Dynamics
-
-
-
 ## 2. Model Outline
 ****
 &nbsp; 
@@ -64,7 +60,7 @@ This model does not include a spatial component as the phenomena of interest are
 * _List of agent-owned variables (e.g. age, heading, ID, etc.)_
 * _List of agent-owned methods/procedures (e.g. move, consume, reproduce, die, etc.)_
 
-The first type of agent in this model will be engineers in a design organization. Each engineer has some portion of the system for which they are responsible. The
+The first type of agent in this model will be engineers in a design organization. Each engineer has a part for which they are responsible and which can be modeled jointly as a property of the agent to simplify the model. Then the agent will have several properties associated with the part, the first of which is a *Historical mean*: The agent will have a value representing historical information about previous parts of that 
 
 The second type of agent is a manager. 
 
