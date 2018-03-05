@@ -12,7 +12,7 @@ John Meluso
  
 _Provide a short, 1-3 sentence description of the goal of your model_
 
-The objective of this model is to simulate the effects of networked miscommunication between members of a design team on the resulting complex engineered system's performance. The model will simulate miscommunication between team members about the definition of a design parameter's "estimate" -- a phenomena identified through more than 80 interviews with practicing engineers in a real-world complex engineered system design context -- and the resulting value of that parameter at the end of the system design process.
+The objective of this model is to simulate the effects of networked miscommunication between members of a design team on the resulting complex engineered system's performance. The model will simulate miscommunication between team members about the definition of a design parameter's "estimate" -- a phenomena identified through more than 100 interviews with practicing engineers in a real-world complex engineered system design context -- and the resulting value of that parameter at the end of the system design process.
 
 &nbsp;  
 ### 1.2. Justification
@@ -27,7 +27,15 @@ Systems engineering methods generally apply top-down approaches to system techni
 
 _Short overview of the key processes and/or relationships you are interested in using your model to explore. Will likely be something regarding emergent behavior that arises from individual interactions_
 
-I'm interested in exploring the spread of design estimate uncertainty resulting from system miscommunication and reduction in system performance consequential to 
+This model will simulate the micro-level process of communication wherein individuals will receive requests for information and with some probability provide either the requested piece of information or a different piece of information. The model will then aggregate those micro-level decisions by representing those decisions as summed elements of a larger design process. At the system-level, I'm curious to see whether there are any phenomena associated with varying probabilities of communicative effectiveness and how they affect system performance, both absolute and variability.
+
+#### 1.3.1. Micro-level Processes
+
+The micro-level processes of this model will be those of decision making within an agent and how the agent exchanges information with other agents. Agents will have a reporting structure through which they will receive requests for information. When they receive a request for information, the agent will have a (parameter-determined and -swept) probability of interpreting the request in one of two possible formsI'm interested in exploring the spread of design estimate uncertainty resulting from system miscommunication and reduction in system performance consequential to 
+
+#### 1.3.2. Macro-level Dynamics
+
+
 
 ## 2. Model Outline
 ****
@@ -40,6 +48,7 @@ _Description of the environment in your model. Things to specify *if they apply*
 * _List of environment-owned variables (e.g. resources, states, roughness)_
 * _List of environment-owned methods/procedures (e.g. resource production, state change, etc.)_
 
+This model does not include a spatial component as the phenomena of interest are related to behavioral decision making and sociological dynamics related to information exchange. Sections 2.2 (Agents) and 2.3 (Action and Interaction), respectively, will describe the model's characterization of these phenomena.
 
 ```python
 # Include first pass of the code you are thinking of using to construct your environment
