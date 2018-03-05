@@ -57,8 +57,6 @@ This model does not include a spatial component as the phenomena of interest are
 # NOTE: If using Netlogo, remove "python" from the markdown at the top of this section to get a generic code block
 ```
 
-&nbsp; 
-
 ### 2.2. Agents
  
  _Description of the "agents" in the system. Things to specify *if they apply*:_
@@ -66,6 +64,11 @@ This model does not include a spatial component as the phenomena of interest are
 * _List of agent-owned variables (e.g. age, heading, ID, etc.)_
 * _List of agent-owned methods/procedures (e.g. move, consume, reproduce, die, etc.)_
 
+The first type of agent in this model will be engineers in a design organization. Each engineer has some portion of the system for which they are responsible. The
+
+The second type of agent is a manager. 
+
+the model will include an external element, the "program manager", who will make regular requests for information and aggregate the agents' information into a system.
 
 ```python
 # Include first pass of the code you are thinking of using to construct your agents
