@@ -33,11 +33,13 @@ This model does not include a spatial component as the phenomena of interest are
 ### 2.2. Agents
 ****
 
+_Note: In advance, I recognize that I will have to synchronize the functions for the agents so that agents can call the same function of different types of agents. I'm not there yet...but I'll get there._
+
 #### 2.2.1. The Engineer
 
 The first type of agent in this model will be engineers in a design organization. Each engineer has a part for which they are responsible and which can be modeled jointly as a property of the agent to simplify the model. Then the agent will have several properties associated with the part, the first of which are the **historical mean** and **historical variance**. The agent will have two values representing historical information about previous parts which represent their knowledge of education, past designs, and previous work experience. To design a new part for the new system, the agent will sample from the historical distribution of the mean and variance as a random variable. The agent will populate a **current mean** and **current variance** representing the mean of all samples drawn for the current design and the variance of the samples drawn for the current design, respectively. The agent will also draw samples for a **predicted mean** by drawing from the same historical distribution.
 
-The routines associated with the engineer are then to update the current estimate, update the predicted estimate, and to respond to a request for an estimate with the probability value mentioned in Section 2.1. Updating the current value, _**update current**_, will be to draw another value and calculate the mean and _population_ variance of the new set of samples. Likewise, updating the prediction, _**update predicted**_, will be to draw another value and calculate the mean and _sample_ variance of the new set of samples (using the sample to represent uncertainty bounds). When a value request, _**request estimate**_, is made from another agent, the engineer has a probability of delivering either the current or the predicted estimate (which I've seen in practice).
+The routines associated with the engineer are then to update the current estimate, update the predicted estimate, and to respond to a request for an estimate with the probability value mentioned in Section 2.1. Updating the current value, _**update current**_, will be to draw another value and calculate the mean and _population_ variance of the new set of samples. Likewise, updating the prediction, _**update predicted**_, will be to draw another value and calculate the mean and _sample_ variance of the new set of samples (using the sample to represent uncertainty bounds). When a value request, _**request estimate**_, is made from another agent, the engineer has a probability of delivering either the current or the predicted estimate (which I've seen in practice) based on a randomly-determined **communication type** variable.
 
 ```python
 class engineer():
@@ -193,6 +195,8 @@ class manager():
 **_Interaction Topology_**
 
 _Description of the topology of who interacts with whom in the system. Perfectly mixed? Spatial proximity? Along a network? CA neighborhood?_
+
+The interactions topology will be a balanced tree network using NetworkX of height 6 and a down degree of 7 for each node. 
  
 **_Action Sequence_**
 
