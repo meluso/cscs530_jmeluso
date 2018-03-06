@@ -202,7 +202,7 @@ class manager():
 
 _Description of the topology of who interacts with whom in the system. Perfectly mixed? Spatial proximity? Along a network? CA neighborhood?_
 
-The interactions topology will be a balanced tree network using NetworkX with a height of 6 and down degree of 7 for each node prior to the 6th level. The 1st level (1 agent) will be an instance of the manager class (a class I'm developing for future potential of modeling different organizational structures). The next levels (2-5) will be integrators. The final level (6) will be all engineers.
+The interactions topology will be a balanced tree network using NetworkX with a height of 6 and down degree of 7 for each node prior to the 6th level. The 1st level (1 agent) will be an instance of the manager class (a class I'm developing for future potential of modeling different organizational structures). The next levels (2-5) will be integrators. The final level (6) will be all engineers. This tree structure is common in engineering project-focused organizations (as opposed to functional or matrix organizations).
 
 **_Action Sequence_**
 
