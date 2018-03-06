@@ -27,28 +27,11 @@ This model will simulate the micro-level process of communication wherein indivi
 ## 2. Model Outline
 ### 2.1. Environment
 *****
-_Description of the environment in your model. Things to specify *if they apply*:_
-
-* _Boundary conditions (e.g. wrapping, infinite, etc.)_
-* _Dimensionality (e.g. 1D, 2D, etc.)_
-* _List of environment-owned variables (e.g. resources, states, roughness)_
-* _List of environment-owned methods/procedures (e.g. resource production, state change, etc.)_
 
 This model does not include a spatial component as the phenomena of interest are related to behavioral decision making and sociological dynamics related to information exchange. Sections 2.2 (Agents) and 2.3 (Action and Interaction), respectively, will describe the model's characterization of these phenomena. However, there are still a handful of properties associated with the world such as the time, communication probability, network structure, etc. Those will be covered further in the following sections.
 
-```python
-# Include first pass of the code you are thinking of using to construct your environment
-# This may be a set of "patches-own" variables and a command in the "setup" procedure, a list, an array, or Class constructor
-# Feel free to include any patch methods/procedures you have. Filling in with pseudocode is ok! 
-# NOTE: If using Netlogo, remove "python" from the markdown at the top of this section to get a generic code block
-```
-
 ### 2.2. Agents
 ****
- _Description of the "agents" in the system. Things to specify *if they apply*:_
- 
-* _List of agent-owned variables (e.g. age, heading, ID, etc.)_
-* _List of agent-owned methods/procedures (e.g. move, consume, reproduce, die, etc.)_
 
 #### 2.2.1. The Engineer
 
