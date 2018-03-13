@@ -41,6 +41,8 @@ This model does not include a spatial component as the phenomena of interest are
 
 _Note: In advance, I recognize that I will have to synchronize the functions for the agents so that agents can call the same function from different types of agents. I'm not there yet...but I'll get there._
 
+
+
 __*LS COMMENTS:*__
 *If I get what you are saying here correctly, then I'd suggest looking into using a parent class to define a general agent and then using that as the basis to build your subsequent agent types.*
 
