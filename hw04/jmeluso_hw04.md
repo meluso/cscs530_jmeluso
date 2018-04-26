@@ -41,11 +41,19 @@ This model does not include a spatial component as the phenomena of interest are
 
 _Note: In advance, I recognize that I will have to synchronize the functions for the agents so that agents can call the same function from different types of agents. I'm not there yet...but I'll get there._
 
+
+
+__*LS COMMENTS:*__
+*If I get what you are saying here correctly, then I'd suggest looking into using a parent class to define a general agent and then using that as the basis to build your subsequent agent types.*
+
 #### 2.2.1. The Engineer
 
 The first type of agent in this model will be engineers in a design organization. Each engineer has a part for which they are responsible and which can be modeled jointly as a property of the agent to simplify the model. Then the agent will have several properties associated with the part, the first of which are the **historical mean** and **historical variance**. The agent will have two values representing historical information about previous parts which represent their knowledge of education, past designs, and previous work experience. To design a new part for the new system, the agent will sample from the historical distribution of the mean and variance as a random variable. The agent will populate a **current mean** and **current variance** representing the mean of all samples drawn for the current design and the variance of the samples drawn for the current design, respectively. The agent will also draw samples for a **predicted mean** by drawing from the same historical distribution.
 
 The routines associated with the engineer are then to update the current estimate, update the predicted estimate, and to respond to a request for an estimate with the probability value mentioned in Section 2.1. Updating the current value, _**update current**_, will be to draw another value and calculate the mean and _population_ variance of the new set of samples. Likewise, updating the prediction, _**update predicted**_, will be to draw another value and calculate the mean and _sample_ variance of the new set of samples (using the sample to represent uncertainty bounds). When a value request, _**request estimate**_, is made from another agent, the engineer has a probability of delivering either the current or the predicted estimate (which I've seen in practice) based on a randomly-determined **communication type** variable.
+
+__*LS Comments:*__
+*As someone who is outside engineering, I'd love to hear a bit more on the substantive processes you're aiming to capture with this current vs. predicted value here, and what is being represented by the choice to use one versus the other. Also, does the current vs. predicted choice tend to be a globally instituted preference in a whole organization or is there heterogeneity?*
 
 ```python
 class engineer():
@@ -100,6 +108,9 @@ class engineer():
         else:
             return self.pred_mean
 ```
+__*LS Comments:*__
+*I may be missing something here, but I can't tell currently how the the predicted vs. current variance difference is either propagating through the system or feeding back into the agents' next turn of estimation? Right now it looks like only the means for each are being passed through to the integrator, but given that both the means are coming from the identically specified distributions, I'm not sure where the difference is other than whatever is just present from different draws (which given a large enough number of samples, should go away)? Like I said - could be missing something here!*
+
 
 #### 2.2.2. The Integrator
 
@@ -257,6 +268,13 @@ I'm interested in sweeping the **comm_prob** randomly-determined variable becaus
 
 I'm aware that there's a lot left to be done for both documentation and building of the model. For one, I should probably find a way to either consolidate to a single agent class or a more universal set of agent routines at the very least. I'd also like to find a way to represent miscommunication at each step throughout the process. That may require creating current and predicted values for the integrators as well as the engineers to make the model more realistic. Also realistic is the clustering of knowledge, where certain branches of the tree may have one belief while others have different beliefs.
 
+__*LS Comments:*__
+*A standard way to get at miscommunication between agents is to add a tunable "error" or "noise" term to interactions. Here, that might look like a pulling a value from a (probably Gaussian) distribution centered at 0 (assuming there is no systematic bias in miscommunication) on each turn and adding it to whatever value is getting passed along the chain.*
+
+
 I'm also concerned that I haven't given enough autonomy to the agents, and that's something I'd like feedback on. While each individual agent technically uses a random value to determine communication strategy, I'm concerned that this model isn't representative enough of real contexts. Perhaps to be more specific, I'd love to build a platform which my lab and I can use for general application of social and engineering phenomena. As I work through this problem, I'm recognizing that a significant amount of work would need to go into constructing an accurate engineering model of a system in order for that to happen. I'd need to use a specific case like the canonical "FireSat" example from the "aerospace Bible", Space Mission Analysis & Design. I may try to make the final model more representative of such a system, but I'm not sure it will provide any advantages in terms of assessing the effects of social dynamics in organizations on organization or system performance which a more generic model couldn't achieve. More generic structures would also allow for greater flexibility with network structures, so I'm leaning toward a more generic model at this point.
+
+__*LS Comments:*__
+*Generic is usually a solid place to start with an ABM. That said, if you think a tighter coupling to a real world case would help you hammer out particular design decisions, please feel free to start there as well.*
 
 &nbsp;
